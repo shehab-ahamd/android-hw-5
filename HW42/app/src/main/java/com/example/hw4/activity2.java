@@ -64,14 +64,15 @@ em.setOnClickListener(new View.OnClickListener() {
         startActivity(mail2);
     }
 });
-ph.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        String phones = ph.getText().toString();
-        Intent call =new Intent(Intent.ACTION_DIAL);
-        call.setData(Uri.parse("tel:"+ph));
-        startActivity(call);
+        ph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String phones = ph.getText().toString();
+                Intent call =new Intent(Intent.ACTION_DIAL);
+                call.setData(Uri.parse("tel:"+Integer.parseInt(phones)));
+                startActivity(call);
+            }
+        });
     }
-});
-    }
+
 }
